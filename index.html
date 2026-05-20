@@ -1,0 +1,257 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polus Parafusos Ferragens e Ferramentas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração de Cores do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#F97316', // Laranja vibrante para ferramentas
+                            dark: '#1F2937',   // Cinza escuro/Preto
+                            light: '#F3F4F6'   // Fundo claro
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Estilos adicionais suaves */
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(31, 41, 55, 0.85), rgba(31, 41, 55, 0.9)), url('https://images.unsplash.com/photo-1581166397057-235af2b3c6dd?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-brand-light flex flex-col min-h-screen">
+
+    <!-- Cabeçalho (Navbar) -->
+    <header class="bg-brand-dark text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="wrench" class="text-brand-orange w-8 h-8"></i>
+                <div>
+                    <h1 class="text-xl font-bold uppercase tracking-wider leading-none">Polus</h1>
+                    <span class="text-xs text-gray-400 block mt-1">Parafusos, Ferragens e Ferramentas</span>
+                </div>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex gap-6 font-medium">
+                <a href="#inicio" class="hover:text-brand-orange transition-colors">Início</a>
+                <a href="#produtos" class="hover:text-brand-orange transition-colors">Nossos Produtos</a>
+                <a href="#sobre" class="hover:text-brand-orange transition-colors">Sobre a Loja</a>
+                <a href="#contato" class="hover:text-brand-orange transition-colors">Contato</a>
+            </nav>
+
+            <!-- Botão Menu Mobile -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Expandido -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 pb-4 px-4 space-y-3">
+            <a href="#inicio" class="block hover:text-brand-orange transition-colors pt-2">Início</a>
+            <a href="#produtos" class="block hover:text-brand-orange transition-colors">Nossos Produtos</a>
+            <a href="#sobre" class="block hover:text-brand-orange transition-colors">Sobre a Loja</a>
+            <a href="#contato" class="block hover:text-brand-orange transition-colors">Contato</a>
+        </div>
+    </header>
+
+    <!-- Seção Hero (Destaque Principal) -->
+    <section id="inicio" class="hero-bg text-white py-24 md:py-32">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6">A sua loja completa de Ferragens e Ferramentas</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10">Qualidade, durabilidade e o melhor atendimento para sua obra, reforma ou projeto. Tudo o que você precisa em um só lugar!</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/5511960649376" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg flex items-center justify-center gap-2 transition-transform transform hover:scale-105">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Fazer Orçamento
+                </a>
+                <a href="#produtos" class="bg-transparent border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-bold py-3 px-8 rounded-lg transition-colors text-center">
+                    Ver Categorias
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Produtos/Categorias -->
+    <section id="produtos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-brand-dark mb-4">Nossa Linha de Produtos</h3>
+                <div class="w-24 h-1 bg-brand-orange mx-auto rounded"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Trabalhamos com as melhores marcas do mercado para garantir a segurança e a eficiência do seu trabalho.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-light p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center group border border-gray-100">
+                    <div class="w-16 h-16 bg-brand-dark text-brand-orange rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i data-lucide="hexagon" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-brand-dark">Parafusos e Fixadores</h4>
+                    <p class="text-gray-600">Ampla variedade de parafusos, porcas, arruelas, buchas, pregos e chumbadores para todas as aplicações.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-light p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center group border border-gray-100">
+                    <div class="w-16 h-16 bg-brand-dark text-brand-orange rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i data-lucide="lock" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-brand-dark">Ferragens Gerais</h4>
+                    <p class="text-gray-600">Dobradiças, fechaduras, trincos, puxadores, cadeados e acessórios completos para portas e móveis.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-light p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow text-center group border border-gray-100">
+                    <div class="w-16 h-16 bg-brand-dark text-brand-orange rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                        <i data-lucide="hammer" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-brand-dark">Ferramentas</h4>
+                    <p class="text-gray-600">Ferramentas manuais, elétricas, equipamentos de proteção individual (EPIs) e discos de corte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre / Por que nos escolher -->
+    <section id="sobre" class="py-20 bg-brand-light">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1542013936693-884638332954?auto=format&fit=crop&w=800&q=80" alt="Prateleiras de loja de ferragens" class="rounded-xl shadow-lg object-cover w-full h-[400px]">
+            </div>
+            <div class="md:w-1/2">
+                <h3 class="text-3xl font-bold text-brand-dark mb-4">Tradição e Qualidade</h3>
+                <div class="w-16 h-1 bg-brand-orange mb-6"></div>
+                <p class="text-gray-600 mb-4 leading-relaxed">
+                    A <strong>Polus Parafusos Ferragens e Ferramentas</strong> nasceu com a missão de fornecer não apenas produtos, mas soluções completas para profissionais da construção civil, marceneiros, mecânicos e também para quem gosta do tradicional "faça você mesmo".
+                </p>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Nosso diferencial é o atendimento especializado. Ajudamos você a encontrar exatamente a peça ou ferramenta necessária para que o seu projeto seja concluído com excelência e segurança.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center gap-3 text-brand-dark font-medium">
+                        <i data-lucide="check-circle-2" class="text-brand-orange w-5 h-5"></i>
+                        Estoque variado com pronta entrega
+                    </li>
+                    <li class="flex items-center gap-3 text-brand-dark font-medium">
+                        <i data-lucide="check-circle-2" class="text-brand-orange w-5 h-5"></i>
+                        Marcas de alta confiabilidade
+                    </li>
+                    <li class="flex items-center gap-3 text-brand-dark font-medium">
+                        <i data-lucide="check-circle-2" class="text-brand-orange w-5 h-5"></i>
+                        Preços competitivos
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé e Contato -->
+    <footer id="contato" class="bg-brand-dark text-gray-300 mt-auto border-t-4 border-brand-orange">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                
+                <!-- Coluna 1: Marca -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="wrench" class="text-brand-orange w-6 h-6"></i>
+                        <h2 class="text-xl font-bold text-white uppercase tracking-wider">Polus</h2>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-4 leading-relaxed">
+                        Sua parceira ideal para obras e reformas. Parafusos, ferragens, ferramentas manuais e elétricas com o melhor custo-benefício.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Contato Rápido -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Fale Conosco</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="block text-sm text-gray-400">WhatsApp / Telefone</span>
+                                <a href="https://wa.me/5511960649376" target="_blank" class="text-white hover:text-brand-orange transition-colors">(11) 96064-9376</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="block text-sm text-gray-400">E-mail</span>
+                                <a href="mailto:polusferragensmaua@outlook.com" class="text-white hover:text-brand-orange transition-colors text-sm break-all">polusferragensmaua@outlook.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <span class="block text-sm text-gray-400">Atendimento</span>
+                                <span class="text-white text-sm">Mauá, SP (e região)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Informações Legais -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Informações Legais</h3>
+                    <div class="bg-gray-800 p-4 rounded-lg border border-gray-700">
+                        <p class="text-sm text-gray-300 font-medium mb-1">Razão Social / Loja:</p>
+                        <p class="text-xs text-gray-400 mb-3">Polus Parafusos Ferragens e Ferramentas</p>
+                        
+                        <p class="text-sm text-gray-300 font-medium mb-1">CNPJ:</p>
+                        <p class="text-lg font-mono text-white">11.763.598/0001-97</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; <span id="year"></span> Polus Parafusos Ferragens e Ferramentas. Todos os direitos reservados.</p>
+                <p class="mt-2 md:mt-0">Desenvolvido com dedicação.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // Inicializar os ícones do Lucide
+        lucide.createIcons();
+
+        // Atualizar o ano dinamicamente no rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Controle do Menu Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar o menu ao clicar em um link (mobile)
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
+```
